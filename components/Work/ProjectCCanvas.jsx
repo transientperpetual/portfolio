@@ -179,7 +179,7 @@ function PiCase(props) {
                 receiveShadow
                 geometry={nodes["Broadcom_BCM2711B0_CPU,_RPi4ModelB"].geometry}
                 material={
-                  materials["0.776471_0.756863_0.737255_0.000000_0.002"]
+                  materials["0.901961_0.901961_0.901961_0.000000_0.001"]
                 }
               />
             </group>
@@ -199,9 +199,7 @@ function PiCase(props) {
                 castShadow
                 receiveShadow
                 geometry={nodes["Microphone_Plug,_RPi4ModelB002"].geometry}
-                material={
-                  materials["0.101961_0.101961_0.101961_0.000000_0.002"]
-                }
+                material={translucentMaterial1}
               />
             </group>
           </group>
@@ -216,7 +214,7 @@ function PiCase(props) {
                 receiveShadow
                 geometry={nodes.mesh694_mesh001.geometry}
                 material={
-                  materials["0.901961_0.917647_0.929412_0.000000_0.002"]
+                  materials["0.901961_0.901961_0.901961_0.000000_0.001"]
                 }
               />
               <mesh
@@ -250,7 +248,7 @@ function PiCase(props) {
                 receiveShadow
                 geometry={nodes.mesh4169_mesh001.geometry}
                 material={
-                  materials["0.901961_0.917647_0.929412_0.000000_0.002"]
+                  materials["0.901961_0.901961_0.901961_0.000000_0.001"]
                 }
               />
               <mesh
@@ -268,7 +266,7 @@ function PiCase(props) {
                 receiveShadow
                 geometry={nodes.mesh4169_mesh001_2.geometry}
                 material={
-                  materials["1.000000_0.807843_0.501961_0.000000_0.001"]
+                  materials["0.901961_0.901961_0.901961_0.000000_0.001"]
                 }
               />
             </group>
@@ -284,7 +282,7 @@ function PiCase(props) {
                 receiveShadow
                 geometry={nodes.mesh2235_mesh001.geometry}
                 material={
-                  materials["1.000000_1.000000_1.000000_0.000000_0.002"]
+                  materials["0.901961_0.901961_0.901961_0.000000_0.001"]
                 }
               />
               <mesh
@@ -293,7 +291,7 @@ function PiCase(props) {
                 receiveShadow
                 geometry={nodes.mesh2235_mesh001_1.geometry}
                 material={
-                  materials["0.501961_0.501961_0.501961_0.000000_0.002"]
+                  materials["0.901961_0.901961_0.901961_0.000000_0.001"]
                 }
               />
             </group>
@@ -311,7 +309,7 @@ function PiCase(props) {
                 nodes["Cypress_CYW43455_Wireless_Module_Cover,_RPi4ModelB"]
                   .geometry
               }
-              material={materials["0.639216_0.666667_0.678431_0.000000_0.002"]}
+              material={materials["0.901961_0.901961_0.901961_0.000000_0.001"]}
             />
           </group>
           <group
@@ -334,7 +332,7 @@ function PiCase(props) {
                 receiveShadow
                 geometry={nodes.mesh2689_mesh001_1.geometry}
                 material={
-                  materials["0.901961_0.901961_0.901961_0.000000_0.001"]
+                  materials["0.901961_0.901961_0.901961_0.000000_0.001"] // this was copied
                 }
               />
             </group>
@@ -375,7 +373,7 @@ function PiCase(props) {
                 receiveShadow
                 geometry={nodes.mesh297_mesh001.geometry}
                 material={
-                  materials["0.901961_0.901961_0.901961_0.000000_0.001"]
+                  materials["0.968627_0.878431_0.600000_0.000000_0.001"]
                 }
               />
               <mesh
@@ -401,7 +399,7 @@ function PiCase(props) {
                 receiveShadow
                 geometry={nodes.mesh1769_mesh001.geometry}
                 material={
-                  materials["0.000000_0.752941_0.000000_0.000000_0.001"]
+                  materials["0.901961_0.901961_0.901961_0.000000_0.001"]
                 }
               />
               <mesh
@@ -410,7 +408,7 @@ function PiCase(props) {
                 receiveShadow
                 geometry={nodes.mesh1769_mesh001_1.geometry}
                 material={
-                  materials["0.901961_0.917647_0.929412_0.000000_0.002"]
+                  materials["0.901961_0.901961_0.901961_0.000000_0.001"]
                 }
               />
               <mesh
@@ -470,37 +468,3 @@ function PiCase(props) {
     </group>
   );
 }
-
-// function Watch(props) {
-//   const { nodes, materials } = useGLTF('/watch-v1.glb')
-//   return (
-//     <group {...props} dispose={null}>
-//       <mesh geometry={nodes.Object005_glass_0.geometry}>
-//         <meshStandardMaterial {...materials.glass} wireframe />
-//         <Html scale={100} rotation={[Math.PI / 2, 0, 0]} position={[180, -350, 50]} transform occlude>
-//           <div className="annotation">
-//             6.550 $ <span style={{ fontSize: '1.5em' }}>🥲</span>
-//           </div>
-//         </Html>
-//       </mesh>
-//       <mesh castShadow receiveShadow geometry={nodes.Object006_watch_0.geometry}>
-//         <meshStandardMaterial {...materials.watch} wireframe />
-//       </mesh>
-//     </group>
-//   )
-// }
-
-// function Watch(props) {
-//   const { nodes } = useGLTF('/rasp.glb')
-
-//   return (
-//     <group {...props} dispose={null}>
-//       <mesh geometry={nodes.Object_2.geometry} rotation={[-Math.PI / 2, 0, 0]}>
-//         {/* Make surface invisible */}
-//         <meshBasicMaterial transparent opacity={0} />
-//         {/* Draw only the edges */}
-//         <Edges scale={1.01} threshold={15} color="black" />
-//       </mesh>
-//     </group>
-//   )
-// }

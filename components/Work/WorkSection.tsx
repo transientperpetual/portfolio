@@ -7,7 +7,7 @@ import ProjectBCanvas from "./ProjectBCanvas.jsx";
 export default function WorkSection() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
-      <div className=" rounded-xl   w-[300px] h-[300px]">
+      <div className=" rounded-xl w-[300px] h-[300px]">
         {/* <Image src={project} width={280} height={280} alt={"project"} /> */}
         <ProjectACanvas />
         <h3 className="text-xl font-semibold mb-2">
@@ -18,7 +18,7 @@ export default function WorkSection() {
         </p>
       </div>
 
-      <div className=" rounded-xl  w-[300px] h-[300px]">
+      <div className=" rounded-xl w-[300px] h-[300px]">
         {/* <Image src={project} width={280} height={280} alt={"project"} /> */}
         <ProjectBCanvas />
         <h3 className="text-xl font-semibold mb-2">
@@ -29,7 +29,7 @@ export default function WorkSection() {
         </p>
       </div>
 
-      <div className=" rounded-xl  w-[300px] h-[300px]">
+      <div className=" rounded-xl w-[300px] h-[300px]">
         {/* <Image src={project} width={280} height={280} alt={"project"} /> */}
         <ThreeCanvas />
         <h3 className="text-xl font-semibold mb-2">

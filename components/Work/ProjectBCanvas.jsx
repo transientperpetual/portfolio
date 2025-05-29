@@ -68,7 +68,7 @@ function AutoRotatingModel() {
 
   return (
     <group ref={groupRef}>
-      <PiCase scale={8} position={[0, -0, 0]} />
+      <PiCase scale={6} position={[0, -0.3, 0]} />
     </group>
   );
 }
@@ -986,13 +986,7 @@ function PiCase(props) {
               />
             </group>
           </group>
-          <group name="doorLogo_<1>" />
           <group name="ExhaustFan_<1>">
-            <group
-              name="occurrence_of_ExhaustFan"
-              position={[-0.181, 0.076, -0.059]}
-              rotation={[-0.007, -0.514, -1.554]}
-            />
             <group
               name="occurrence_of_ExhaustFan001"
               position={[-0.181, 0.076, -0.059]}
@@ -1187,11 +1181,6 @@ function PiCase(props) {
             />
           </group>
           <group
-            name="occurrence_of_bottomSection"
-            position={[-0.029, 0.086, 0.017]}
-            rotation={[-Math.PI, 0.753, -Math.PI]}
-          />
-          <group
             name="occurrence_of_CGHolder"
             position={[-0.029, 0.089, 0.017]}
             rotation={[-Math.PI, 1.41, 0]}
@@ -1343,20 +1332,6 @@ function PiCase(props) {
             />
           </group>
           <group
-            name="occurrence_of_lidBlock"
-            position={[-0.028, 0.092, 0.017]}
-            rotation={[-Math.PI, 1.04, -Math.PI]}
-          />
-          <group
-            name="occurrence_of_lidBlock001"
-            position={[-0.029, 0.092, 0.017]}
-            rotation={[Math.PI, -1.047, Math.PI]}
-          />
-          <group
-            name="occurrence_of_lidBlock002"
-            position={[-0.029, 0.092, 0.017]}
-          />
-          <group
             name="occurrence_of_masterBed"
             position={[-0.029, 0.09, 0.017]}
             rotation={[Math.PI / 2, 0, -Math.PI / 3]}
@@ -1372,46 +1347,11 @@ function PiCase(props) {
             />
           </group>
           <group
-            name="occurrence_of_midSection001"
-            position={[-0.029, 0.172, 0.017]}
-            rotation={[0, -0.802, 0]}
-          />
-          <group
-            name="occurrence_of_netCup"
-            position={[-0.052, 0.131, 0.025]}
-            rotation={[-0.007, 0.355, 0.701]}
-          />
-          <group
-            name="occurrence_of_netCup002"
-            position={[-0.047, 0.217, -0.001]}
-            rotation={[-0.48, -0.074, 0.491]}
-          />
-          <group
-            name="occurrence_of_netCup004"
-            position={[-0.004, 0.217, 0.009]}
-            rotation={[0.441, 0.68, -0.912]}
-          />
-          <group
-            name="occurrence_of_netCup005"
-            position={[-0.009, 0.131, 0.033]}
-            rotation={[0.74, 0.404, -0.564]}
-          />
-          <group
-            name="occurrence_of_netCup008"
-            position={[-0.034, 0.217, 0.041]}
-            rotation={[0.584, 0.608, 0.177]}
-          />
-          <group
-            name="occurrence_of_netCup010"
-            position={[-0.024, 0.131, -0.008]}
-            rotation={[-0.723, -0.278, -0.118]}
-          />
-          <group
             name="occurrence_of_primeGear"
             position={[-0.029, 0.085, 0.017]}
             rotation={[-Math.PI / 2, 0, -0.583]}
           >
-            <group name="primeGear" rotation={[0, 0, -0.056]}>
+            <group name="primeGear">
               <mesh
                 name="mesh697_mesh"
                 castShadow
@@ -1675,21 +1615,21 @@ function PiCase(props) {
                 scale={1.281}
               >
                 <mesh
-                  name="mesh4399_mesh001"
+                  name="mesh4399_mesh"
                   castShadow
                   receiveShadow
-                  geometry={nodes.mesh4399_mesh001.geometry}
+                  geometry={nodes.mesh4399_mesh.geometry}
                   material={
-                    materials["0.796078_0.823529_0.937255_0.000000_0.001"]
+                    materials["0.796078_0.823529_0.937255_0.000000_0.000000"]
                   }
                 />
                 <mesh
-                  name="mesh4399_mesh001_1"
+                  name="mesh4399_mesh_1"
                   castShadow
                   receiveShadow
-                  geometry={nodes.mesh4399_mesh001_1.geometry}
+                  geometry={nodes.mesh4399_mesh_1.geometry}
                   material={
-                    materials["0.901961_0.917647_0.929412_0.000000_0.001"]
+                    materials["0.901961_0.917647_0.929412_0.000000_0.000000"]
                   }
                 />
               </group>
@@ -1700,37 +1640,3 @@ function PiCase(props) {
     </group>
   );
 }
-
-// function Watch(props) {
-//   const { nodes, materials } = useGLTF('/watch-v1.glb')
-//   return (
-//     <group {...props} dispose={null}>
-//       <mesh geometry={nodes.Object005_glass_0.geometry}>
-//         <meshStandardMaterial {...materials.glass} wireframe />
-//         <Html scale={100} rotation={[Math.PI / 2, 0, 0]} position={[180, -350, 50]} transform occlude>
-//           <div className="annotation">
-//             6.550 $ <span style={{ fontSize: '1.5em' }}>🥲</span>
-//           </div>
-//         </Html>
-//       </mesh>
-//       <mesh castShadow receiveShadow geometry={nodes.Object006_watch_0.geometry}>
-//         <meshStandardMaterial {...materials.watch} wireframe />
-//       </mesh>
-//     </group>
-//   )
-// }
-
-// function Watch(props) {
-//   const { nodes } = useGLTF('/rasp.glb')
-
-//   return (
-//     <group {...props} dispose={null}>
-//       <mesh geometry={nodes.Object_2.geometry} rotation={[-Math.PI / 2, 0, 0]}>
-//         {/* Make surface invisible */}
-//         <meshBasicMaterial transparent opacity={0} />
-//         {/* Draw only the edges */}
-//         <Edges scale={1.01} threshold={15} color="black" />
-//       </mesh>
-//     </group>
-//   )
-// }
