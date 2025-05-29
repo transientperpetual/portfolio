@@ -21,7 +21,7 @@ export default function App() {
       onPointerOut={() => setHovered(false)}
       shadows
       camera={{ position: [0, -2, 8], fov: 25 }}
-      style={{ touchAction: "none", background: "#E0E0E0" }}
+      style={{ touchAction: "none", background: "#ffffff", borderRadius: 6 }}
     >
       <ambientLight intensity={0} />
       <spotLight
@@ -45,7 +45,6 @@ export default function App() {
         {/* <PiCase scale={18} position={[0, -1, 0]} /> */}
         <AutoRotatingModel />
       </PresentationControls>
-      <axesHelper args={[5]} />
       {/* <ContactShadows position={[0, -1.4, 0]} opacity={0.75} scale={10} blur={3} far={4} /> */}
       <Environment preset="city" />
     </Canvas>
@@ -69,7 +68,7 @@ function AutoRotatingModel() {
 
   return (
     <group ref={groupRef}>
-      <PiCase scale={18} position={[0, -0.6, 0]} />
+      <PiCase scale={16} position={[0, -0.8, 0]} />
     </group>
   );
 }
@@ -91,7 +90,7 @@ function PiCase(props) {
   const translucentMaterial1 =
     materials["0.101961_0.101961_0.101961_0.000000_0.000000"].clone();
   translucentMaterial1.transparent = true;
-  translucentMaterial1.opacity = 0.8;
+  translucentMaterial1.opacity = 0.6;
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -102,7 +101,7 @@ function PiCase(props) {
             castShadow
             receiveShadow
             geometry={nodes.mesh24_mesh.geometry}
-            material={materials["0.101961_0.101961_0.101961_0.000000_0.000000"]}
+            material={translucentMaterial1}
             showEdges={true}
           />
           <mesh

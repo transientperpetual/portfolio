@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="flex gap-2 p-8">
+      <div className="flex gap-2 p-8 pl-[140px]">
         <span>WORK</span>
         <span>TECH STACK</span>
         <span>ESSAYS</span>
@@ -45,6 +45,8 @@ export default function Home() {
       <section className="flex justify-center">
         <WorkSection />
       </section>
+
+      <section className="h-16"></section>
     </main>
   );
 }
