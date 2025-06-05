@@ -21,7 +21,7 @@ export default function ProjectBCanvas() {
       onPointerOut={() => setHovered(false)}
       shadows
       camera={{ position: [0, -2, 8], fov: 25 }}
-      style={{ touchAction: "none", background: "#ffffff", borderRadius: 6 }}
+      style={{ touchAction: "none", background: "#EBEBEB" }}
     >
       <ambientLight intensity={0} />
       <spotLight
@@ -46,7 +46,7 @@ export default function ProjectBCanvas() {
         <AutoRotatingModel />
       </PresentationControls>
       {/* <ContactShadows position={[0, -1.4, 0]} opacity={0.75} scale={10} blur={3} far={4} /> */}
-      <Environment preset="city" />
+      <Environment preset="sunset" environmentIntensity={0.6} />
     </Canvas>
   );
 }
@@ -68,7 +68,7 @@ function AutoRotatingModel() {
 
   return (
     <group ref={groupRef}>
-      <PiCase scale={6} position={[0, -0.3, 0]} />
+      <PiCase scale={7} position={[0, -0.3, 0]} />
     </group>
   );
 }
@@ -88,15 +88,21 @@ function PiCase(props) {
   }, [actions]);
 
   const translucentMaterial1 = new THREE.MeshBasicMaterial({
-    color: 0xff00ff, // Red color
+    color: 0xff0000, // Red color
     transparent: true,
-    opacity: 0.2,
+    opacity: 0.6,
   });
 
   const translucentMaterial2 = new THREE.MeshBasicMaterial({
-    color: 0x000000, // Red color
+    color: 0xffffff, // black color
     transparent: true,
-    opacity: 0.5,
+    opacity: 0.4,
+  });
+
+  const translucentMaterial3 = new THREE.MeshBasicMaterial({
+    color: 0x000000, // black color
+    transparent: true,
+    opacity: 0.6,
   });
 
   return (
@@ -1205,9 +1211,7 @@ function PiCase(props) {
               castShadow
               receiveShadow
               geometry={nodes.CircuitBed.geometry}
-              material={
-                materials["0.694118_0.101961_0.101961_0.000000_0.000000"]
-              }
+              material={translucentMaterial1}
             />
           </group>
           <group
@@ -1341,10 +1345,10 @@ function PiCase(props) {
               castShadow
               receiveShadow
               geometry={nodes.masterBed.geometry}
-              material={
-                materials["1.000000_1.000000_1.000000_0.000000_0.000000"]
-              }
-            />
+              material={translucentMaterial2}
+            >
+              <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+            </mesh>
           </group>
           <group
             name="occurrence_of_primeGear"
@@ -1490,10 +1494,10 @@ function PiCase(props) {
               castShadow
               receiveShadow
               geometry={nodes["tank_-_Copy"].geometry}
-              material={
-                materials["0.301961_0.301961_0.301961_0.000000_0.000000"]
-              }
-            />
+              material={translucentMaterial3}
+            >
+              <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+            </mesh>
           </group>
           <group
             name="occurrence_of_ventilationCover"

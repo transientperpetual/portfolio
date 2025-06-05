@@ -21,7 +21,7 @@ export default function ProjectACanvas() {
       onPointerOut={() => setHovered(false)}
       shadows
       camera={{ position: [0, -2, 8], fov: 25 }}
-      style={{ touchAction: "none", background: "#ffffff", borderRadius: 6 }}
+      style={{ touchAction: "none", background: "#EBEBEB" }}
     >
       <ambientLight intensity={0} />
       <spotLight
@@ -46,7 +46,7 @@ export default function ProjectACanvas() {
         <AutoRotatingModel />
       </PresentationControls>
       {/* <ContactShadows position={[0, -1.4, 0]} opacity={0.75} scale={10} blur={3} far={4} /> */}
-      <Environment preset="city" />
+      <Environment preset="sunset" environmentIntensity={0.6} />
     </Canvas>
   );
 }
@@ -94,9 +94,9 @@ function Model(props) {
   });
 
   const translucentMaterial2 = new THREE.MeshBasicMaterial({
-    color: 0x000000, // Red color
+    color: 0x000000, // black color
     transparent: true,
-    opacity: 0.5,
+    opacity: 0.8,
   });
 
   return (
@@ -117,7 +117,9 @@ function Model(props) {
                 material={
                   materials["0.796078_0.823529_0.937255_0.000000_0.000000"]
                 }
-              />
+              >
+                <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+              </mesh>
             </group>
             <group
               name="occurrence_of_CBLid001"
@@ -132,7 +134,9 @@ function Model(props) {
                 material={
                   materials["1.000000_1.000000_1.000000_0.000000_0.000000"]
                 }
-              />
+              >
+                <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+              </mesh>
             </group>
           </group>
           <group name="ExhaustFan_<1>">
@@ -150,7 +154,9 @@ function Model(props) {
                   material={
                     materials["0.776471_0.756863_0.737255_0.000000_0.000000"]
                   }
-                />
+                >
+                  <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+                </mesh>
                 <mesh
                   name="mesh4811_mesh_1"
                   castShadow
@@ -159,7 +165,9 @@ function Model(props) {
                   material={
                     materials["0.839216_0.466667_0.368627_0.000000_0.000000"]
                   }
-                />
+                >
+                  <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+                </mesh>
                 <mesh
                   name="mesh4811_mesh_2"
                   castShadow
@@ -168,7 +176,9 @@ function Model(props) {
                   material={
                     materials["0.639216_0.666667_0.678431_0.000000_0.000000"]
                   }
-                />
+                >
+                  <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+                </mesh>
                 <mesh
                   name="mesh4811_mesh_3"
                   castShadow
@@ -177,7 +187,9 @@ function Model(props) {
                   material={
                     materials["0.101961_0.101961_0.101961_0.000000_0.000000"]
                   }
-                />
+                >
+                  <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+                </mesh>
               </group>
             </group>
           </group>
@@ -327,7 +339,9 @@ function Model(props) {
               material={
                 materials["0.101961_0.101961_0.101961_0.000000_0.000000"]
               }
-            />
+            >
+              <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+            </mesh>
           </group>
           <group
             name="occurrence_of_acrylic"
@@ -340,7 +354,9 @@ function Model(props) {
               receiveShadow
               geometry={nodes.acrylic.geometry}
               material={translucentMaterial1}
-            />
+            >
+              <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+            </mesh>
           </group>
           <group
             name="occurrence_of_acrylic001"
@@ -352,7 +368,9 @@ function Model(props) {
               receiveShadow
               geometry={nodes.acrylic001.geometry}
               material={translucentMaterial1}
-            />
+            >
+              <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+            </mesh>
           </group>
           <group
             name="occurrence_of_acrylic002"
@@ -365,7 +383,9 @@ function Model(props) {
               receiveShadow
               geometry={nodes.acrylic002.geometry}
               material={translucentMaterial1}
-            />
+            >
+              <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+            </mesh>
           </group>
           <group
             name="occurrence_of_acrylic003"
@@ -378,7 +398,9 @@ function Model(props) {
               receiveShadow
               geometry={nodes.acrylic003.geometry}
               material={translucentMaterial1}
-            />
+            >
+              <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+            </mesh>
           </group>
           <group
             name="occurrence_of_acrylic004"
@@ -679,7 +701,9 @@ function Model(props) {
                 material={
                   materials["0.286275_0.662745_0.329412_0.000000_0.000000"]
                 }
-              />
+              >
+                <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+              </mesh>
               <mesh
                 name="mesh8193_mesh_1"
                 castShadow
@@ -688,7 +712,9 @@ function Model(props) {
                 material={
                   materials["0.796078_0.823529_0.937255_0.000000_0.000000"]
                 }
-              />
+              >
+                <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+              </mesh>
             </group>
           </group>
           <group
@@ -765,10 +791,10 @@ function Model(props) {
               castShadow
               receiveShadow
               geometry={nodes["tank_-_Copy"].geometry}
-              material={
-                materials["0.101961_0.101961_0.101961_0.000000_0.000000"]
-              }
-            />
+              material={translucentMaterial2}
+            >
+              <Edges scale={1} color="black" threshold={15} lineWidth={1} />
+            </mesh>
           </group>
           <group
             name="occurrence_of_TopLid"

@@ -13,7 +13,7 @@ import {
 import { useRef, useState, useEffect } from "react";
 import * as THREE from "three";
 
-export default function App() {
+export default function ProjectCCanvas() {
   const [hovered, setHovered] = useState(false);
   return (
     <Canvas
@@ -21,7 +21,7 @@ export default function App() {
       onPointerOut={() => setHovered(false)}
       shadows
       camera={{ position: [0, -2, 8], fov: 25 }}
-      style={{ touchAction: "none", background: "#ffffff", borderRadius: 6 }}
+      style={{ touchAction: "none", background: "#EBEBEB" }}
     >
       <ambientLight intensity={0} />
       <spotLight
@@ -46,7 +46,7 @@ export default function App() {
         <AutoRotatingModel />
       </PresentationControls>
       {/* <ContactShadows position={[0, -1.4, 0]} opacity={0.75} scale={10} blur={3} far={4} /> */}
-      <Environment preset="city" />
+      <Environment preset="sunset" environmentIntensity={0.6} />
     </Canvas>
   );
 }
@@ -68,7 +68,7 @@ function AutoRotatingModel() {
 
   return (
     <group ref={groupRef}>
-      <PiCase scale={16} position={[0, -0.8, 0]} />
+      <PiCase scale={18} position={[0, -0.8, 0]} />
     </group>
   );
 }
