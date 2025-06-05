@@ -2,8 +2,15 @@ import Image from "next/image";
 import SocialLinks from "../components/SocialLinks";
 import Tabs from "../components/Tabs";
 import UniverseProfile from "../components/UserProfile";
+import { getDatabase } from '../lib/notion'
+import { getArticlePositions } from '../lib/getArticlePositions'
 
-export default function Home() {
+
+export default async function Home() {
+    const databaseId = process.env.NOTION_PROJECTS_DB_ID;
+  const projects = await getDatabase(databaseId);
+    console.log("PROJECTS : ", projects)
+
   return (
     <main className="min-h-screen flex flex-col bg-white text-[#2D2D2D] py-12 p-8">
       <section className="flex flex-col md:flex-row items-center md:items-start gap-6 pt-12 max-w-6xl mx-auto">
@@ -34,7 +41,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-6">
-        <Tabs />
+        <Tabs projects={projects}/>
       </section>
     </main>
   );

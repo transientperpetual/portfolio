@@ -1,10 +1,13 @@
 import ProjectCCanvas from "./ProjectCCanvas";
 import ProjectACanvas from "./ProjectACanvas.jsx";
 import ProjectBCanvas from "./ProjectBCanvas.jsx";
+import { getDatabase } from "../../lib/notion";
 
-export default function WorkSection() {
+export default function WorkSection({projects}) {
+  console.log("P IN WS  :", projects)
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 text-gray-600">
+      
       <div className="w-[320px] h-[240px]">
         {/* <Image src={project} width={280} height={280} alt={"project"} /> */}
         <ProjectACanvas />

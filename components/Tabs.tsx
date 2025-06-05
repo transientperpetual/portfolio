@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import WorkSection from "./Work/WorkSection";
+import WorkSection from "./work/WorkSection";
 
-export default function Tabs() {
+export default function Tabs({projects}) {
+  console.log("PRK : ", projects)
   const [activeTab, setActiveTab] = useState<"work" | "tech" | "essays">(
     "work"
   );
@@ -44,7 +45,7 @@ export default function Tabs() {
       </div>
 
       <section className="flex justify-center">
-        {activeTab === "work" && <WorkSection />}
+        {activeTab === "work" && <WorkSection projects={projects}/>}
         {activeTab === "tech" && (
           <div className="text-center">Coming soon: Tech Stack</div>
         )}
