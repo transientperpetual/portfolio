@@ -11,7 +11,7 @@ export default function Tabs({projects}) {
 
   return (
     <>
-      <div className="flex gap-6 py-6 max-w-6xl mx-auto text-md md:text-lg">
+      <div className="flex gap-6 py-6 max-w-6xl mx-auto text-md md:text-md">
         <button
           className={`${
             activeTab === "work"

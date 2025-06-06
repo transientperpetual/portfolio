@@ -2,10 +2,15 @@ import ProjectCCanvas from "./ProjectCCanvas";
 import ProjectACanvas from "./ProjectACanvas.jsx";
 import ProjectBCanvas from "./ProjectBCanvas.jsx";
 import { getDatabase } from "../../lib/notion";
+import Link from "next/link";
 
 export default function WorkSection({projects}) {
   console.log("P IN WS  :", projects)
   return (
+    <Link
+      href={`/work/smart-planter-control-system`}
+      className="cursor-pointer"
+    >
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 text-gray-600">
       
       <div className="w-[320px] h-[240px]">
@@ -37,5 +42,6 @@ export default function WorkSection({projects}) {
         </p>
       </div>
     </div>
+    </Link>
   );
 }

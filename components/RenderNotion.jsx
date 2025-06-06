@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import MermaidComponent from './MermaidComponent'
@@ -60,7 +60,6 @@ const components = {
 
 const Embed = (value, type) => {
   let src
-  const [isLoading, setIsLoading] = useState(true)
 
   try {
     src = value.type === 'external' ? value.external.url : value.file.url
@@ -97,14 +96,12 @@ const Embed = (value, type) => {
             unoptimized
             src={src}
             alt={caption ? caption : 'Notion image'}
-            className={clsx(
-              'block h-min w-full rounded-md object-contain duration-700 ease-in-out',
-              isLoading ? 'blur grayscale' : 'blur-0 grayscale-0'
-            )}
+            className={
+              'block h-min w-full rounded-md object-contain duration-700 ease-in-out blur-0 grayscale-0'
+            }
             height="300"
             width="500"
             priority
-            onLoad={() => setIsLoading(false)}
           />
         </div>
         {caption && <figcaption className="text-center">{caption}</figcaption>}
