@@ -70,7 +70,7 @@ const Embed = (value, type) => {
   if (src.startsWith('https://x.com')) {
     const tweetId = src.match(/status\/(\d+)/)[1]
     return (
-      <div className="light justify-center md:flex">
+      <div className="justify-center light md:flex">
         <Tweet id={tweetId} components={components} />
       </div>
     )
@@ -83,7 +83,7 @@ const Embed = (value, type) => {
     return (
       <iframe
         title="youtube"
-        className="aspect-video w-full rounded-3xl"
+        className="w-full aspect-video rounded-3xl"
         src={src}
         alt={caption}
       />
@@ -133,25 +133,25 @@ export const renderBlock = (block) => {
     case 'paragraph':
       return (
         <p>
-          <Text text={value.rich_text} />
+          <Text text={value.rich_text} className={"text-[#2d2d2d]"}/>
         </p>
       )
     case 'heading_1':
       return (
         <h1>
-          <Text text={value.rich_text} className="font-heading tracking-wide" />
+          <Text text={value.rich_text} className="font-bold tracking-wide" />
         </h1>
       )
     case 'heading_2':
       return (
         <h2>
-          <Text text={value.rich_text} className="font-heading tracking-wide" />
+          <Text text={value.rich_text} className="font-bold tracking-wide" />
         </h2>
       )
     case 'heading_3':
       return (
         <h3>
-          <Text text={value.rich_text} className="font-heading tracking-wide" />
+          <Text text={value.rich_text} className="tracking-wide font-heading" />
         </h3>
       )
     case 'bulleted_list_item':
@@ -197,7 +197,7 @@ export const renderBlock = (block) => {
     case 'image':
     case 'video':
     case 'embed':
-      return <figure className="mb-4 mt-6">{Embed(value, type)}</figure>
+      return <figure className="mt-6 mb-4">{Embed(value, type)}</figure>
     case 'divider':
       return <hr key={id} />
     case 'quote':
@@ -225,7 +225,7 @@ export const renderBlock = (block) => {
       }
 
       return (
-        <pre className="md:custom-scrollbar text-xs dark:prose-invert md:text-sm">
+        <pre className="text-xs md:custom-scrollbar dark:prose-invert md:text-sm">
           <code
             dangerouslySetInnerHTML={{ __html: codeHighlight }}
             key={id}

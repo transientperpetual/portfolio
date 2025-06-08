@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import WorkSection from "./work/WorkSection";
+import WorkSection from "@/components/Work/WorkSection";
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState<"work" | "tech" | "essays">(
@@ -10,13 +10,13 @@ export default function Tabs() {
 
   return (
     <>
-      <div className="flex max-w-6xl gap-6 py-6 mx-auto select-none text-md md:text-md">
+      <div className="flex gap-6 py-6 max-w-6xl mx-auto text-md md:text-lg">
         <button
           className={`${
             activeTab === "work"
-              ? "font-semibold text-[#2d2d2d] border-b-2 border-[#2d2d2d]"
-              : "text-[#999999] hover:text-[#2d2d2d]"
-          } pb-1  hover:cursor-pointer`}
+              ? "font-semibold text-black border-b-2 border-black"
+              : "text-[#999999]"
+          } pb-1 transition-all`}
           onClick={() => setActiveTab("work")}
         >
           WORK
@@ -24,9 +24,9 @@ export default function Tabs() {
         <button
           className={`${
             activeTab === "tech"
-              ? "font-semibold text-[#2d2d2d] border-b-2 border-[#2d2d2d]"
-              : "text-[#999999] hover:text-[#2d2d2d]"
-          } pb-1 hover:cursor-pointer`}
+              ? "font-semibold text-black border-b-2 border-black"
+              : "text-[#999999]"
+          } pb-1 transition-all`}
           onClick={() => setActiveTab("tech")}
         >
           TECH STACK
@@ -34,10 +34,10 @@ export default function Tabs() {
         <button
           className={`${
             activeTab === "essays"
-              ? "font-semibold text-[#2d2d2d] border-b-2 border-[#2d2d2d]"
-              : "text-[#999999] hover:text-[#2d2d2d]"
-          } pb-1 hover:cursor-pointer`}
-          onClick={() => window.open("https://jangidankit.substack.com/", "_blank")}
+              ? "font-semibold text-black border-b-2 border-black"
+              : "text-[#999999]"
+          } pb-1 transition-all`}
+          onClick={() => setActiveTab("essays")}
         >
           ESSAYS
         </button>
@@ -47,6 +47,9 @@ export default function Tabs() {
         {activeTab === "work" && <WorkSection />}
         {activeTab === "tech" && (
           <div className="text-center">Coming soon: Tech Stack</div>
+        )}
+        {activeTab === "essays" && (
+          <div className="text-center">Coming soon: Essays</div>
         )}
       </section>
     </>
