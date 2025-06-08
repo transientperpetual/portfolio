@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ankit Jangid - Hello !",
+  title: "Ankit's Portfolio !",
   description: "Digital Portfolio",
 };
 

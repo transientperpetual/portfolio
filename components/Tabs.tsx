@@ -46,7 +46,7 @@ export default function Tabs() {
       <section className="flex justify-center">
         {activeTab === "work" && <WorkSection />}
         {activeTab === "tech" && (
-          <div className="text-center">Coming soon: Tech Stack</div>
+          <div className="text-center">Adding soon</div>
         )}
       </section>
     </>
