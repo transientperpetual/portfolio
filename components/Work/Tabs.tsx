@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import WorkSection from "@/components/Work/WorkSection";
+import WorkSection from "./WorkSection";
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState<"work" | "tech" | "essays">(
@@ -10,7 +10,7 @@ export default function Tabs() {
 
   return (
     <>
-      <div className="flex gap-6 py-6 max-w-6xl mx-auto text-md md:text-lg">
+      <div className="flex max-w-6xl gap-6 py-6 mx-auto text-md md:text-lg">
         <button
           className={`${
             activeTab === "work"
