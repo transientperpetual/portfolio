@@ -7,7 +7,8 @@ export default function WorkSection() {
   return (
     
     <div className="grid grid-cols-1 gap-24 text-gray-600 select-none lg:grid-cols-3">
-      <div className="w-[320px] h-[240px]">
+      {/* <div className="w-[240px] h-[240px] md:w-[320px] "> */}
+      <div className="h-[240px] w-[320px] ">
         <ProjectACanvas />
         <Link
       href={`/work/smart-planter-mechanics-and-fog-system`}

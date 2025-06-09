@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 // List of universe images and their matching phrases
 const universeOptions = [
   { image: "/universes/uni1.webp", label: "legally licensed" },
-  { image: "/universes/uni2.webp", label: "not anymore" },
+  // { image: "/universes/uni2.webp", label: "not anymore" },
   { image: "/universes/uni3.webp", label: "first 1/2 marathon" },
-  { image: "/universes/uni5.webp", label: "water proof 🐟" },
-  { image: "/universes/uni6.webp", label: "weaponizedd" },
+  { image: "/universes/uni5.webp", label: "water proof" },
+  // { image: "/universes/uni6.webp", label: "weaponizedd" },
   { image: "/universes/uni7.webp", label: "graduation team" },
 ];
 
