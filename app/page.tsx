@@ -7,7 +7,7 @@ export default async function Home() {
 
   return (
     <>
-      <main className="min-h-screen flex flex-col text-[#2d2d2d] md:py-12 px-6">
+      <main className="min-h-screen flex flex-col text-[#2d2d2d] md:py-12 px-6 pb-12">
         <section className="flex flex-col items-center max-w-6xl gap-6 pt-12 mx-auto md:flex-row md:items-start">
           {/* Text Content */}
           <div className="md:flex-1 text-[#2d2d2d] order-2 md:order-1 text-left md:text-left">
