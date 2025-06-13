@@ -7,13 +7,14 @@ const universeOptions = [
   // { image: "/universes/uni2.webp", label: "not anymore" },
   { image: "/universes/uni3.webp", label: "first 1/2 marathon" },
   { image: "/universes/uni5.webp", label: "water proof" },
-  // { image: "/universes/uni6.webp", label: "weaponizedd" },
+  { image: "/universes/uni6.webp", label: "did i make the curve?" },
   { image: "/universes/uni7.webp", label: "graduation team" },
+  { image: "/universes/uni8.webp", label: "can fix 👍" },
 ];
 
 const defaultState = {
   image: "/profile.jpeg",
-  label: "change universe",
+  label: "change vibe",
 };
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -71,7 +72,7 @@ export default function UniverseProfile() {
       <img
         src={current.image}
         alt="Ankit Jangid"
-        className="object-cover w-56 h-56 transition duration-300 ease-in-out md:w-56 md:h-56 rounded-t-2xl"
+        className="object-cover w-56 h-56 transition duration-300 ease-in-out md:w-56 md:h-56 rounded-sm"
       />
 
       <div
