@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 export default async function Project({ params }) {
   const databaseId = process.env.NOTION_PROJECTS_DB_ID;
   const database = await getDatabase(databaseId);
-  const slug = params.slug;
+  const slug = await params.slug;
   const year = new Date().getFullYear();
 
   const project = database.find(

@@ -9,7 +9,7 @@ const canvasMap = {
   A: ProjectACanvas,
   B: ProjectBCanvas,
   D: ProjectDCanvas,
-  // C: ProjectCCanvas,
+  C: ProjectCCanvas,
   // Add more mappings if needed
 };
 

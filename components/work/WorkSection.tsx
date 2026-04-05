@@ -9,7 +9,7 @@ export default function WorkSection() {
   return (
     <div className="grid grid-cols-1 gap-24 text-gray-600 select-none lg:grid-cols-3">
       {/* <div className="w-[240px] h-[240px] md:w-[320px] "> */}
-      {/* <div className="w-[320px] h-[240px] mb-6">
+      <div className="w-[320px] h-[240px] mb-6">
         <ProjectDCanvas />
         <Link
           href={`/work/engineering-a-safer-crash-guard`}
@@ -24,7 +24,7 @@ export default function WorkSection() {
             </p>
           </div>
         </Link>
-      </div> */}
+      </div>
 
       <div className="h-[240px] w-[320px] ">
         <ProjectACanvas />
