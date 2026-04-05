@@ -8,8 +8,11 @@ const universeOptions = [
   { image: "/universes/uni3.webp", label: "first 1/2 marathon" },
   { image: "/universes/uni5.webp", label: "water proof" },
   { image: "/universes/uni6.webp", label: "did i make the curve?" },
-  { image: "/universes/uni7.webp", label: "graduation team" },
-  { image: "/universes/uni8.webp", label: "can fix 👍" },
+  // { image: "/universes/uni7.webp", label: "graduation team" },
+  // { image: "/universes/uni8.webp", label: "can fix 👍" },
+  { image: "/universes/uni9.webp", label: "somewhere in Karnataka" },
+  { image: "/universes/uni10.webp", label: "clocked 190 on Ducati" },
+  { image: "/universes/uni11.webp", label: "ride POV" },
 ];
 
 const defaultState = {

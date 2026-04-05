@@ -15,14 +15,13 @@ export default async function Home() {
               Ankit Jangid
             </h1>
             <p className="mb-4 text-md text-[#6d6d6d] md:pr-[200px] md:pl-0 px-2">
-              I am interested in building things. To create products that are
-              functional is the end. My skills and tools are just the means.
+              Experienced in bridging physical and digital systems. Over my career, I have transitioned from developing foundational IoT hardware and sensor networks to leading the technical execution of enterprise digital twin platforms.
             </p>
             <p className="mb-4 text-md text-[#6d6d6d] md:pr-[200px] md:pl-0 px-2">
-              Outside of work output I like to read, run, cycle.
+              Outside of work output I like to read, run, motorbike.
             </p>
             <p className="mb-8 text-md text-[#6d6d6d] md:pr-[200px] md:pl-0 px-2">
-              I am always excited to learn through conversations—please feel free
+              I am always excited to learn through conversations, please feel free
               to reach out if you’d like to collaborate or chat!
             </p>
             <section className="flex justify-center md:justify-start">

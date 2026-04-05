@@ -8,7 +8,8 @@ import { useState } from 'react';
 const canvasMap = {
   A: ProjectACanvas,
   B: ProjectBCanvas,
-  C: ProjectCCanvas,
+  D: ProjectDCanvas,
+  // C: ProjectCCanvas,
   // Add more mappings if needed
 };
 

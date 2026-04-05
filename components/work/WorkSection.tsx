@@ -1,12 +1,31 @@
 import ProjectCCanvas from "./ProjectCCanvas";
 import ProjectACanvas from "./ProjectACanvas.jsx";
 import ProjectBCanvas from "./ProjectBCanvas.jsx";
+import ProjectDCanvas from "./ProjectDCanvas.jsx";
+
 import Link from "next/link";
 
 export default function WorkSection() {
   return (
     <div className="grid grid-cols-1 gap-24 text-gray-600 select-none lg:grid-cols-3">
       {/* <div className="w-[240px] h-[240px] md:w-[320px] "> */}
+      <div className="w-[320px] h-[240px] mb-6">
+        <ProjectDCanvas />
+        <Link
+          href={`/work/engineering-a-safer-crash-guard`}
+          className="cursor-pointer"
+        >
+          <div className="hover:underline">
+            <h3 className="mt-2 text-lg font-semibold hover:underline hover:text-gray-800">
+              A safer crash guard with FEA
+            </h3>
+            <p className="text-sm text-gray-500">
+              Inspired from a real-life incident
+            </p>
+          </div>
+        </Link>
+      </div>
+
       <div className="h-[240px] w-[320px] ">
         <ProjectACanvas />
         <Link
@@ -54,6 +73,8 @@ export default function WorkSection() {
           </div>
         </Link>
       </div>
+
+      
     </div>
   );
 }
