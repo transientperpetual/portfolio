@@ -1,4 +1,4 @@
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 import { getDatabase, getBlocks } from '../../../lib/notion';
 import slugify from 'slugify';
