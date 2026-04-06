@@ -17,7 +17,7 @@ export default function WorkSection() {
         >
           <div className="hover:underline">
             <h3 className="mt-2 text-lg font-semibold hover:underline hover:text-gray-800">
-              A safer crash guard with FEA
+              Engineering a Safer Crash Guard
             </h3>
             <p className="text-sm text-gray-500">
               Inspired from a real-life incident

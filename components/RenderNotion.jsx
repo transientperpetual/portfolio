@@ -19,6 +19,9 @@ hljs.registerLanguage('html', html)
 import plaintext from 'highlight.js/lib/languages/plaintext'
 hljs.registerLanguage('plaintext', plaintext)
 
+import 'katex/dist/katex.min.css';
+import { InlineMath, BlockMath } from 'react-katex';
+
 export const Text = ({ text, className }) => {
   if (!text) {
     return null
@@ -128,7 +131,8 @@ const renderNestedList = (block) => {
 export const renderBlock = (block) => {
   const { type, id } = block
   const value = block[type]
-
+    // if (type === "equation") return <BlockMath math={value.expression} />;
+  
   switch (type) {
     case 'paragraph':
       return (
@@ -251,6 +255,10 @@ export const renderBlock = (block) => {
         </figure>
       )
     // TODO: support table block
+
+    case 'equation':
+      return <BlockMath math={value.expression} />;
+
     // case "table":
     //   console.log(value.children);
     //   return (
