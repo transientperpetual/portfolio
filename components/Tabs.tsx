@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import WorkSection from "./work/WorkSection";
+import TechStack from "./TechStack";
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState<"work" | "tech" | "essays">(
@@ -46,7 +47,8 @@ export default function Tabs() {
       <section className="flex justify-center">
         {activeTab === "work" && <WorkSection />}
         {activeTab === "tech" && (
-          <div className="text-center">Adding soon</div>
+          // <div className="text-center">Adding soon</div>
+          <TechStack />
         )}
       </section>
     </>

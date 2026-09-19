@@ -68,7 +68,7 @@ export default function WorkSection() {
               Raspberry Pi Cooling Case
             </h3>
             <p className="text-sm text-gray-500">
-              I know my units. 4000+ downloads on GrabCad
+              Precise engineering. 4000+ downloads on GrabCad
             </p>
           </div>
         </Link>
